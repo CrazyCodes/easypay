@@ -9,7 +9,7 @@ spl_autoload_register(function ($class_name) {
 });
 
 use EasyPay\EasyPay;
-use EasyPay\Getway\Asia\Wechat\WechatLogic;
+use EasyPay\Getway\Asia\China\Wechat\WechatLogic;
 
 $config = [
   'asia.wechat' => [
@@ -22,16 +22,15 @@ $config = [
 ];
 
 $payConfig = [
-  'gateway' => 'asia.wechat',
   'order_id' => '111111'
 ];
 
 $refundConfig = [
-  'gateway' => 'asia.wechat',
   'order_id' => '111111'
 ];
 
 $easyPay = new EasyPay();
+$easyPay->load(WechatLogic::class);
 $easyPay->pay($payConfig);
 $easyPay->notify('asia.wechat');
 $easyPay->refund($refundConfig);

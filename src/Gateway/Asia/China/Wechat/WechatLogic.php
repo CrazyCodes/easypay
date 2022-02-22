@@ -5,34 +5,28 @@
  *  Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
  */
 
-namespace EasyPay;
+namespace EasyPay\Getway\Asia\China\Wechat;
 
 use EasyPay\Kernel\GateWayInterface;
 
-class EasyPay
+class WechatLogic implements GateWayInterface
 {
-  public $gateWay;
-
-  public function load(GateWayInterface $gateWay)
-  {
-    $this->gateWay = $gateWay;
-  }
-
   public function pay()
   {
-    return $this->gateWay->pay();
+
   }
 
   public function notify()
   {
-    return $this->gateWay->notify();
+
+  }
+
+  public function callback()
+  {
+
   }
 
   public function refund()
-  {
-  }
-
-  public function refundNotify()
   {
   }
 }
