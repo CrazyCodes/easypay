@@ -9,6 +9,6 @@ namespace EasyPay\Kernel;
 
 interface GateWayInterface
 {
-  public function pay();
+  public function pay($payConfig);
   public function notify();
 }

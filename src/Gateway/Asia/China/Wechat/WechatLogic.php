@@ -11,7 +11,7 @@ use EasyPay\Kernel\GateWayInterface;
 
 class WechatLogic implements GateWayInterface
 {
-  public function pay()
+  public function pay($payConfig)
   {
 
   }
